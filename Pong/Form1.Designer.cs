@@ -32,6 +32,7 @@
             this.p1ScoreLabel = new System.Windows.Forms.Label();
             this.p2ScoreLabel = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.Winnerlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // p1ScoreLabel
@@ -66,12 +67,25 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
+            // Winnerlabel
+            // 
+            this.Winnerlabel.BackColor = System.Drawing.Color.Transparent;
+            this.Winnerlabel.Enabled = false;
+            this.Winnerlabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Winnerlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Winnerlabel.Location = new System.Drawing.Point(320, 226);
+            this.Winnerlabel.Name = "Winnerlabel";
+            this.Winnerlabel.Size = new System.Drawing.Size(205, 47);
+            this.Winnerlabel.TabIndex = 2;
+            this.Winnerlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 492);
+            this.Controls.Add(this.Winnerlabel);
             this.Controls.Add(this.p2ScoreLabel);
             this.Controls.Add(this.p1ScoreLabel);
             this.DoubleBuffered = true;
@@ -92,6 +106,7 @@
         private System.Windows.Forms.Label p1ScoreLabel;
         private System.Windows.Forms.Label p2ScoreLabel;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label Winnerlabel;
     }
 }
 
